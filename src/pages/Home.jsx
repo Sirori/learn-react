@@ -1,15 +1,17 @@
-import Logo from "../components/Logo";
+import Logo from '@/components/Logo';
 
 function Home() {
   return (
-    <div>
+    <>
       <h2>홈 페이지</h2>
 
-      <Logo />
-      <Logo color="blue" size={300} />
-      <Logo color="skyblue" size={500} />
-      <Logo color="pink" size={700} />
-    </div>
+      <div hidden className="demoLogos">
+        <Logo />
+        <Logo color="blue" size={12} />
+        <Logo color="sky" />
+        <Logo color="rose" size={108} />
+      </div>
+    </>
   );
 }
 
