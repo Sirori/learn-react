@@ -52,3 +52,27 @@ abbr[title] {
   background: #4744be99;
   color: #17172d;
 }
+
+.switchButton {
+  position: relative;
+  background: skyblue;
+  border-radius: 20px;
+  border: 1px solid white;
+  width: 60px;
+  height: 30px;
+}
+
+.buttonHandler {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+}
+
+.active {
+  left: 55%;
+}
