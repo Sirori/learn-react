@@ -1,11 +1,12 @@
-function GoToButton({ 
-  direction/* 'down' | 'up' */, 
+import { oneOf } from 'prop-types';
+
+function GoToButton({
+  direction /* 'down' | 'up' */,
   label /* string */,
   // 나머지 전달된 속성(prop)을 모은 객체
   // rest props
   ...restProps
 }) {
-
   // 문 또는 식
   // let className = '';
   // if (direction === 'down') {
@@ -44,4 +45,8 @@ function GoToButton({
   );
 }
 
-export default GoToButton
+GoToButton.propTypes = {
+  direction: oneOf(['down', 'up']),
+};
+
+export default GoToButton;

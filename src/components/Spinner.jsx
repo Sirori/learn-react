@@ -1,7 +1,11 @@
-import React from "react";
+import { number, string, arrayOf } from 'prop-types';
 
-function Spinner({size = 200, message="로딩중...", colors = ['#93dbe9', '#689cc5', '#5e6fa3'],
-...restProps}) {
+function Spinner({
+  size = 200,
+  message = '로딩 중...',
+  colors = ['#93dbe9', '#689cc5', '#5e6fa3'],
+  ...restProps
+}) {
   return (
     <svg
       width={size}
@@ -9,7 +13,6 @@ function Spinner({size = 200, message="로딩중...", colors = ['#93dbe9', '#689
       display="block"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 100 100"
-      aria-hidden="true"
       {...restProps}
     >
       <title>{message}</title>
@@ -85,5 +88,11 @@ function Spinner({size = 200, message="로딩중...", colors = ['#93dbe9', '#689
     </svg>
   );
 }
+
+Spinner.propTypes = {
+  size: number,
+  message: string,
+  colors: arrayOf([string]),
+};
 
 export default Spinner;
